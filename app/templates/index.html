@@ -1,49 +1,22 @@
-{% extends 'base.html'%}
-{% block styles%} {{ super() }}
-<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}"> {% endblock %}
-{% block content %}
+{%extends "base.html"%} {%block content%}
+<div class="row">
+  <p class="welcome">Welcome , {{current_user.username}}</p>
+  {%for pitch in pitches%}
 
-<body>
-    <br>
-    <div class="d-flex justify-content-center">
-        <div class="card-groups">
-            <div class="card border-info mb-3" style="max-width: 35rem;">
-                <div class="card-header">Life</div>
-                <div class="card-body text-info">
-                    <h5 class="card-title">Pitches about life</h5>
-                    <p class="card-text">Want to change peoples mindsets, then give a pitch on best life practices!!</p>
-                    <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Add Pitch</a></button>
-                    <button type="button" class="btn btn-outline-primary"><a href="/categories/life">Read
-                            Pitches</a></button>
-                </div>
-            </div>
-
-            <div class="card border-info mb-3" style="max-width: 35rem;">
-                <div class="card-header">Coding</div>
-                <div class="card-body text-info">
-                    <h5 class="card-title">Pitches about coding</h5>
-                    <p class="card-text">Want to change peoples mindsets, then give a pitch on best coding practices!!
-                    </p>
-                    <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Add Pitch</a></button>
-                    <button type="button" class="btn btn-outline-primary"><a href="/categories/coding">Read
-                            Pitches</a></button>
-                </div>
-            </div>
-
-            <div class="card border-info mb-3" style="max-width: 35rem;">
-                <div class="card-header">Funny</div>
-                <div class="card-body text-info">
-                    <h5 class="card-title">Funny Pitches</h5>
-                    <p class="card-text">Want to change peoples mindsets, then give a pitch on how best to make things
-                        fun!!</p>
-                    <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Add Pitch</a></button>
-                    <button type="button" class="btn btn-outline-primary"><a href="/categories/funny">Read
-                            Pitches</a></button>
-                </div>
-            </div>
-
-        </div>
+  <div class="card m-3 shadow-sm" style="width: 18rem">
+    <img src="..." class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{pitch.title}}</h5>
+      <p class="card-text">{{pitch.body}}</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
+    <div class="card-footer">
+      <small class="text-muted"
+        >By {{pitch.author.username }} on {{pitch.date_posted}}</small
+      >
+    </div>
+  </div>
 
-    {% endblock%}
-</body>
+  {%endfor%}
+</div>
+{%endblock content%}
