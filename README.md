@@ -37,4 +37,29 @@ As a user I would like to:
          $ git clone https://github.com/NazarineWasonga/pitch/
          $ cd pitches
 
+## Running the Application
+* Creating the virtual environment
+
+        $ python3.6 -m venv --without-pip virtual
+        $ source virtual/bin/env
+        $ curl https://bootstrap.pypa.io/get-pip.py | python
+
+* Installing Flask and other Modules
+
+        $ see Requirements.txt
+
+* To run the application, in your terminal:
+
+        $ python3 run.py
+        
+## Testing the Application
+* To run the tests for the class files:
+
+        $ python3.6 manage.py test
+
+## Technologies Used
+* Python3.6
+* Flask
+
+
 
