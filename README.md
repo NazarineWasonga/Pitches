@@ -15,3 +15,26 @@ As a user I would like to:
 * be signed in for me to leave a comment
 * view the pitches I have created in my profile page.
 * comment on the different pitches and leave feedback.
+
+## Specifications
+| Behaviour | Input | Output |
+| :---------------- | :---------------: | ------------------: |
+| Display pitch categories | **On page load** | List of various categories of pitches |
+| Display tabs with  category | **On Tab link click** | Clickable links to open pitches by category |
+| Display profile | **Click profile page** | Redirected to a page with your profile |
+| Display pitches | **On page load** | Each pitch displays author, title, pitch, date comment tab |
+| To add a pitch  | **Click an add pitch** | Redirected to the pitch collection form|
+
+
+## SetUp / Installation Requirements
+### Prerequisites
+* python3.6
+* virtualenv
+
+### Cloning
+* In your terminal:
+
+         $ git clone https://github.com/NazarineWasonga/pitch/
+         $ cd pitches
+
+
