@@ -7,14 +7,15 @@ an application that allows users to use that one minute wisely. The users will s
 
 
 ## User Stories
-These are the behaviours/features that the application implements for use by a user.
+* As a user, I would like to see the pitches other people have posted.
+* As a user, I would like to vote on the pitch they liked and give it a downvote or upvote.
+* As a user, I would like to be signed in for me to leave a comment
+* As a user, I would like to receive a welcoming email once I sign up.
+* As a user, I would like to view the pitches I have created in my profile page.
+* As a user, I would like to comment on the different pitches and leave feedback.
+* As a user, I would like to submit a pitch in any category.
+* As a user, I would like to view the different categories. 
 
-As a user I would like to:
-* See the pitches other people have posted.
-* submit a pitch in any category.
-* be signed in for me to leave a comment
-* view the pitches I have created in my profile page.
-* comment on the different pitches and leave feedback.
 
 ## Specifications
 | Behaviour | Input | Output |
@@ -27,31 +28,25 @@ As a user I would like to:
 
 
 ## SetUp / Installation Requirements
-### Prerequisites
-* python3.6
-* virtualenv
+Run 
+``git clone https://github.com/NazarineWasonga/Pitches.git``
 
-### Cloning
-* In your terminal:
+or download the zip file from github.
 
-         $ git clone https://github.com/NazarineWasonga/pitch/
-         $ cd pitches
+After extracting the files, 
 
-## Running the Application
-* Creating the virtual environment
+1. Navigate to the project folder
+>`` cd Pitch.`` 
 
-        $ python3.6 -m venv --without-pip virtual
-        $ source virtual/bin/env
-        $ curl https://bootstrap.pypa.io/get-pip.py | python
+2. Creating a virtual environment
+>``virtualenv virtual.``
 
-* Installing Flask and other Modules
+3. Activating the virtual environment
+>``source virtual/bin/activate.``
 
-        $ see Requirements.txt
+4. Running the application
+>``python3 manage.py server``
 
-* To run the application, in your terminal:
-
-        $ python3 run.py
-        
 ## Testing the Application
 * To run the tests for the class files:
 
@@ -60,6 +55,9 @@ As a user I would like to:
 ## Technologies Used
 * Python3.6
 * Flask
+* Bootstrap4
+* Css3
+* Html5
 
 ## License
 
