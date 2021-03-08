@@ -57,8 +57,9 @@ After extracting the files,
 >``CREATE DATABASE pitchy``
 4. Connect to your database by
 > ``/c pitchy``
-5.To view your database structure use
- >``select from Users;``
+<!-- 5.To view your database structure use
+ >``select from Users;`` -->
+
 
 ##### Exporting database configurations
 * export SQLALCHEMY_DATABASE_URI=postgresql+psycopg2://{User Name}:{password}@localhost/{database name}
