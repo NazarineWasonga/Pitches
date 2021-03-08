@@ -13,7 +13,7 @@ class Config:
     MAIL_PORT = 465
     MAIL_USE_TLS = False
     MAIL_USE_SSL = True
-    MAIL_USERNAME = 'nazarine48@gmail.com.com'
+    MAIL_USERNAME = 'nazarinewasonga48@gmail.com'
     MAIL_PASSWORD = 'ze11y@jones'
 
 
