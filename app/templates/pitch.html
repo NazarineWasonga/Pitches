@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro %}
+
+{% block content %}
+
+        <div  class="container">
+                <h2 class="text-center" id="posts">All Interview Pitches</h2>
+
+            {{ macro.display(job) }}
+        </div>
+{% endblock%}
