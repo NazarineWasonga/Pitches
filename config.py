@@ -14,7 +14,7 @@ class Config:
     MAIL_USE_TLS = False
     MAIL_USE_SSL = True
     MAIL_USERNAME = 'nazarinewasonga48@gmail.com'
-    MAIL_PASSWORD = 'ze11y@jones'
+    MAIL_PASSWORD = 'naz48810'
 
 
 class ProdConfig(Config):
@@ -28,7 +28,7 @@ class DevConfig(Config):
     """
     Development config
     """
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:zelly@localhost/nazarine'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:naz48810/nazarine'
     DEBUG = True
 
 
