@@ -5,6 +5,8 @@
 ## Description
 an application that allows users to use that one minute wisely. The users will submit their one minute pitches and other users will vote on them and leave comments to give their feedback on them.
 
+You can view the site at:[Heroku](pitchees.herokuapp.com/)
+
 
 ## User Stories
 * As a user, I would like to see the pitches other people have posted.
