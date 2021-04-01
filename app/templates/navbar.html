@@ -1,48 +1,45 @@
-<nav class="mb-1 navbar navbar-expand-lg bg-dark">
-    <a class="navbar-brand" href="{{url_for('main.index')}}"><strong>PITCH</strong> </a>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="{{url_for('main.jobs')}}">Interview</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{url_for('main.events')}}">Events</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{url_for('main.adverts')}}">Advertisement</a>
-            </li>
+<div class="navbar navbar-dark" role="navigation"
+    style="margin-bottom:0; border-bottom: 1px solid; display:inline-block; padding-left:10px">
+    <div class="container-fluid">
 
-            {% if current_user.is_authenticated %}
-            <li class="nav-item">
-                <a class="nav-link" href="{{url_for('main.new_pitch')}}">create Pitch</a>
-            </li>
+        <div class="navbar navbar-expand-lg navbar-right " style="display: inline-block">
+            <div class="nav navbar-nav navbar-expand-lg " style="display: inline-block">
+                <a href="/">Home</a></li>
+                <a href="{{url_for('main.business_pitches')}}">Business pitches</a>
+                <a href="{{url_for('main.screenplay_pitches')}}">Screenplay pitches</a>
+                <a href="{{url_for('main.project_pitches')}}">project pitches</a>
+            </div>
+            <div>
 
-            {% endif %}
-        </ul>
-        <ul class="navbar-nav ml-auto">
-            {% if current_user.is_authenticated %}
-            <li class="nav-item">
-                <i style="color: white" class="fas fa-user"></i>&nbsp;<strong
-                    style="color:lime; font-weight: bold">{{current_user.username}}</strong>
-            </li>
-            <li class="nav-item">
-                <a style='margin-right:30px; margin-left: 30px; color:lime; font-weight: bold' class="navbar-link"
-                    href="{{url_for('main.profile',name=current_user.username)}}"><i class="far fa-user"></i>&nbsp; My
-                    account</a>
-            <li class="nav-item">
-                <a style='margin-right:30px; color:lime; font-weight: bold' class="navbar-link"
-                    href="{{url_for('auth.logout')}}"><i class="fas fa-sign-out-alt"></i>&nbsp; Log out</a>
+            </div>
+
+
+            <ul class="nav navbar-nav navbar-right" id="lgi">
+                {% if current_user.is_authenticated %}
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">{{current_user.username| capitalize}} <span
+                            class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li></li><a href="/profile/{{current_user.username}}">Profile</a>
+                </li>
+                </li>
+                <li></li><a href="{{url_for('main.user_pitches', uname=current_user.username)}}">My Pitches</a></li>
+                </li>
+                <li role="separator" class="divider"></li>
+                <li></li><a href="{{url_for('auth.logout')}}" style="float:right">Sign out</a></li>
+                </li>
+            </ul>
             </li>
             {% else %}
-            <li class="nav-item">
-                <a style='margin-right:30px' class="nav-link" href="{{url_for('auth.login')}}"
-                    style='margin-right:30px'><i class="fas fa-sign-in-alt"></i>&nbsp; <strong>Log In</strong></a>
-            </li>
-            <li class="nav-item">
-                <a style='margin-right:30px' class="nav-link" href="{{url_for('auth.signup')}}"><i
-                        class="fas fa-user-plus"></i></i>&nbsp; <strong>Sign Up</strong></a>
-            </li>
+            <ul class="auth">
+                <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
+
+                <li><a href="{{url_for('auth.register')}}">Register</a></li>
+            </ul>
+
             {%endif%}
-        </ul>
+
+            </ul>
+        </div>
     </div>
-</nav>
+</div>

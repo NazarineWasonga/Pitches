@@ -1,22 +1,47 @@
-{% extends 'base.html'%}
+{% extends 'base.html' %}
 {% import 'macros.html' as macro %}
+<!-- Styles block -->
+{%block styles%}
+{{ super() }}
+<link href="https://fonts.googleapis.com/css?family=Lobster+Two|Vidaloka&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+    integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+{%endblock%}
 
-{% block content %}
-<div class="mariga">
-    <div class="tab-content">
-        <div class="container tab-pane active" id="all"><br>
-            {{ macro.display(pitches) }}
+<!-- Content block -->
+{%block content%}
+
+<div class="jumbotron text-center"
+    style="background-color: rgb(52, 159, 230); color: #fff; padding: 55px 25px; font-family: 'Lobster Two', cursive;">
+    <h1>Just Pitch It!</h1>
+</div>
+<div class="container" style="padding-bottom: 20px;">
+    <a href="{{url_for('main.new_pitch')}}" class="btn btn-success">Create pitch</a>
+</div>
+
+<div class="container" style="font-family: 'Cormorant Upright', serif;">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="well well-lg">
+                <h3 class="text-info">Business Pitches</h3>
+                <p>You have a business idea? Just pitch it.</p>
+                <a href="{{url_for('main.business_pitches')}}" class="btn btn-primary -center">View</a>
+            </div>
         </div>
-        <div class="container tab-pane fade" id="event"><br>
-            {{ macro.display(event)}}
+        <div class="col-md-4">
+            <div class="well well-lg">
+                <h3 class="text-info">Screenplay Pitches</h3>
+                <p>That movie you've wanted to produce all along, Its time to pitch it.</p>
+                <a href="{{url_for('main.screenplay_pitches')}}" class="btn btn-primary -center">View</a>
+            </div>
         </div>
-        <div class="container tab-pane fade" id="jobs"><br>
-            {{ macro.display(job) }}
-        </div>
-        <div class="container tab-pane fade" id="ads"><br>
-            {{ macro.display(advertisement) }}
-    
+        <div class="col-md-4">
+            <div class="well well-lg">
+                <h3 class="text-info">Project Pitches</h3>
+                <p>Have a project in mind, why not pitch it for a potential investor</p>
+                <a href="{{url_for('main.project_pitches')}}" class="btn btn-primary -center">View</a>
+            </div>
         </div>
     </div>
 </div>
-{% endblock%}
+{%endblock%}
