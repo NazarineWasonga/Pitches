@@ -30,7 +30,7 @@ You can view the site at:[Heroku](https://the-pitch1.herokuapp.com/)
 
 ## Application link
 
-click [here]()
+click [here](https://the-pitch1.herokuapp.com)
 
 
 
